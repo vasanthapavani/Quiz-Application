@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Quiz Application</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="header text-center p-3" id="hd">
+        <h2>Web Development Quiz</h2>
+    </div>
+    <div class="container col-lg-5 col-md-7 col-sm-9 text-center">
+        <div >
+            <form>
+                <div class="question p-3 text-justify">
+                    <h5 class="m-2">1. What does CSS stand for?</h5>
+                    <input type="radio"name="q1" value="a" id="q1a"> <label for="q1a">Cascade style sheet</label><br>
+                    <input type="radio" name="q1" value="b" id="q1b"> <label for="q1b">Cascading style sheets</label><br>
+                    <input type="radio" name="q1" value="c" id="q1c"> <label for="q1c">classic style sheets</label><br>
+                    <input type="radio" name="q1" value="d" id="q1d"> <label for="q1d">
+                        classifying style sheets</label><br>
+                </div><hr>
+                <div class="question p-3 text-justify">
+                    <h5 class="m-2">2.Choose the tag for paragraph </h5>
+                    <input type="radio" name="q2" value="a" id="q2a"> <label for="q2a">a</label><br>
+                    <input type="radio" name="q2" value="b" id="q2b"> <label for="q2b">p</label><br>
+                    <input type="radio" name="q2" value="c" id="q2c"> <label for="q2c">src</label><br>
+                    <input type="radio" name="q2" value="d" id="q2d"> <label for="q2d">href</label><br>
+                </div><hr>
+                <div class="question p-3 text-justify">
+                    <h5 class="m-2">3. Choose the correct HTML element for the largest heading:</h5>
+                    <input type="radio" name="q3" value="a" id="q3a"> <label for="q3a">h1</label><br>
+                    <input type="radio" name="q3" value="b" id="q3b"> <label for="q3b">h3</label><br>
+                    <input type="radio" name="q3" value="c" id="q3c"> <label for="q3c">heading</label><br>
+                    <input type="radio" name="q3" value="d" id="q3d"> <label for="q3d">h6</label><br>
+                </div><hr>
+                <div class="question p-3 text-justify">
+                    <h5 class="m-2">4.what does html stand for</h5>
+                    <input type="radio" name="q4" value="a" id="q4a"> <label for="q4a">Hyper texting markup language</label><br>
+                    <input type="radio" name="q4" value="b" id="q4b"> <label for="q4b">Higher text markup language</label><br>
+                    <input type="radio" name="q4" value="c" id="q4c"> <label for="q4c">Hyper text markup language</label><br>
+                    <input type="radio" name="q4" value="d" id="q4d"> <label for="q4d">Hyper text modifying language  </label><br>
+                </div><hr>
+                <div class="question p-3 text-justify">
+                    <h5 class="m-2">5. What is the correct HTML for referring to an external style sheet?</h5>
+                    <input type="radio" name="q5" value="a" id="q5a"> <label for="q5a">style src="mystyle.css"</label><br>
+                    <input type="radio" name="q5" value="b" id="q5b"> <label for="q5b">stylesheet>mystyle.css</label><br>
+                    <input type="radio" name="q5" value="c" id="q5c"> <label for="q5c">style href="mystyle.css"</label><br>
+                    <input type="radio" name="q5" value="d" id="q5d"> <label for="q5d">link rel="stylesheet" type="text/css" href="mystyle.css"</label><br>
+                </div>
+                <div class="button text-center">
+                    <button type="submit" class="btn btn-outline-warning m-3 btn-lg" onclick="getscore()">Submit</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <script>
+        function getscore(){
+            var score=0;
+            var right_answer_1=document.getElementById('q1a');
+            var q1_answer_2=document.getElementById('q1b');
+            var q1_answer_3=document.getElementById('q1c');
+            var q1_answer_4=document.getElementById('q1d');
+            if(right_answer_1.checked==true){
+                score++;
+            }
+            else{
+                score=score;
+            }
+            var right_answer_2=document.getElementById('q2d');
+            var q2_answer_2=document.getElementById('q2b');
+            var q2_answer_3=document.getElementById('q2a');
+            var q2_answer_4=document.getElementById('q2c');
+            if(right_answer_2.checked==true){
+                score++;
+            }
+            else{
+                score=score;
+            }
+            var right_answer_3=document.getElementById('q3a');
+            var q3_answer_2=document.getElementById('q3b');
+            var q3_answer_3=document.getElementById('q3c');
+            var q3_answer_4=document.getElementById('q3d');
+            if(right_answer_3.checked==true){
+                score++;
+            }
+            else{
+                score=score;
+            }
+            var right_answer_4=document.getElementById('q4c');
+            var q4_answer_2=document.getElementById('q4b');
+            var q4_answer_3=document.getElementById('q4a');
+            var q4_answer_4=document.getElementById('q4d');
+            if(right_answer_4.checked==true){
+                score++;
+            }
+            else{
+                score=score;
+            }
+            var right_answer_5=document.getElementById('q5d');
+            var q5_answer_2=document.getElementById('q5b');
+            var q5_answer_3=document.getElementById('q5c');
+            var q5_answer_4=document.getElementById('q5a');
+            if(right_answer_5.checked==true){
+                score++;
+            }
+            else{
+                score=score;
+            }
+            if(score==0){
+                alert("Sorry you scored 0.Or Invalid input.Try again");
+            }
+            else{
+            alert("Thank You for your participation.Your score is "+score);
+            }
+        }
+    </script>
+</body>
+</html>
